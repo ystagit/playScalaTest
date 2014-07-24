@@ -1,0 +1,14 @@
+@(members: List[Member])
+@import helper._
+@main(title = "Member list") {
+<h1>@members.size members</h1>
+
+<table>
+    @members.map { member =>
+    <tr>
+        <td>@member.name</td>
+        <td>@member.email</td>
+    </tr>
+    }
+</table>
+}
